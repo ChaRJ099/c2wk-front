@@ -58,9 +58,7 @@ export const updateProduct = async (
       Authorization: "Bearer " + token,
     },
     body: JSON.stringify(product),
-  })
-    .then((response) => response.json())
-    .then((data) => data);
+  }).then(({ status }) => status);
 };
 
 export const deleteProduct = async (id: number, token: string) => {

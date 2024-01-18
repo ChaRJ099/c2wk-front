@@ -123,7 +123,7 @@ export default function Home() {
                 >
                   <CardProduct
                     titre={product.name_product}
-                    prix={`${product.price} €`}
+                    prix={`${product.price} ₽`}
                   ></CardProduct>
                 </Link>
               );

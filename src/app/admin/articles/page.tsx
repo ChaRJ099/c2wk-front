@@ -71,10 +71,21 @@ export default function ArticlesPage() {
       apiProductService
         .updateProduct(productId, product, token)
         .then((status) => {
+          console.log("ok", status);
           status === 200 &&
             apiProductService.getProducts().then((data) => setProducts(data));
         });
+    // .then((response) => response.json())
+    // .then((data) => data);
+    // const productIndex = products.findIndex(
+    //   (element) => element.name_product === name
+    // );
+    // products.splice(productIndex, 1, response);
+    // const returnListUpdatedProducts = await apiProductService.getProducts();
+    // setProducts(returnListUpdatedProducts);
+    // setActiveTab(0);
   };
+  // };
 
   const handleChipClick = (n: number) => {
     setActiveTab(n);
@@ -187,7 +198,7 @@ export default function ArticlesPage() {
         {products &&
           products?.map((product: Product) => (
             <Button
-              key={product.id_product}
+              key={product.id_product + product.category_id}
               sx={{
                 height: "30px",
                 width: "100px",
