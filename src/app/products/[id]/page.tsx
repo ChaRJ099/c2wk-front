@@ -48,7 +48,7 @@ export default function Product({ params }: { params: { id: number } }) {
             {" "}
             <h1>{product.productName}</h1>
             <p>{product.description}</p>
-            <p>{product.price} €</p>
+            <p>{product.price} ₽</p>
           </Grid>
 
           <Button variant="contained" sx={{ width: "max-content" }}>

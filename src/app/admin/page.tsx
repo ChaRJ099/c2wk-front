@@ -24,6 +24,16 @@ export default function AdminPage() {
       <Button
         className={styles.admin_button}
         variant="contained"
+        onClick={() => router.push("/admin/users")}
+      >
+        <Icon sx={{ m: "auto", height: 30, width: 30 }}>
+          <UpdateOutlined />
+        </Icon>
+        Manage users
+      </Button>
+      <Button
+        className={styles.admin_button}
+        variant="contained"
         onClick={() => router.push("/admin/categories")}
       >
         <Icon sx={{ m: "auto", height: 30, width: 30 }}>
