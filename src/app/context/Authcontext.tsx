@@ -5,7 +5,7 @@ import { CredentialsInterface, User, UserIDs } from "../interfaces/interfaces";
 import { useRouter, usePathname } from "next/navigation";
 import { getOneUser } from "../services/auth.services";
 
-const apiUrl = "http://23.97.147.233:5001";
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 const initialState = {
   user: null,

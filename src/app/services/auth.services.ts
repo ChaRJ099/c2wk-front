@@ -1,4 +1,4 @@
-const apiUrl = "http://23.97.147.233:5001";
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 export const getOneUser = async (id: number) => {
     const token = localStorage.getItem('token');
