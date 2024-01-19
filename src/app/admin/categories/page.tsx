@@ -20,7 +20,7 @@ import CategoryForm from "../components/CategoryForm";
 import { Category } from "@/app/interfaces/category-interface";
 import { AuthContext } from "@/app/context/Authcontext";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = "http://23.97.147.233:5001";
 
 export default function CategoriesPage() {
   const [activeTab, setActiveTab] = useState<number>(0);

@@ -1,6 +1,6 @@
 import { CategoryInterface } from "../interfaces/category-interface";
 
-const baseURL = process.env.NEXT_PUBLIC_API_URL;
+const baseURL = "http://23.97.147.233:5001";
 
 export const getCategories = async () => {
   return await fetch(`${baseURL}/api/categories`)

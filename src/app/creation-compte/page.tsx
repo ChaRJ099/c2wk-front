@@ -9,7 +9,7 @@ import { UserInfosInterface } from "../interfaces/interfaces";
 import { useRouter } from "next/navigation";
 import { Http2ServerResponse } from "http2";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = "http://23.97.147.233:5001";
 
 export default function CreateAccountPage() {
   const [userInfos, setUserInfos] = useState<UserInfosInterface>({
