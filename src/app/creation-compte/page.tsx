@@ -4,12 +4,10 @@ import { useState } from "react";
 import styles from "../page.module.css";
 import { Button, Grid, TextField } from "@mui/material";
 import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
-import Link from "next/link";
 import { UserInfosInterface } from "../interfaces/interfaces";
 import { useRouter } from "next/navigation";
-import { Http2ServerResponse } from "http2";
 
-const apiUrl = "http://20.119.34.167:5001";
+const apiUrl = "https://20.119.34.167:5001";
 
 export default function CreateAccountPage() {
   const [userInfos, setUserInfos] = useState<UserInfosInterface>({

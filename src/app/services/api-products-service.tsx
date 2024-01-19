@@ -3,7 +3,7 @@ import {
   ProductPostPayload,
 } from "../interfaces/product-interface";
 
-const baseURL = "http://20.119.34.167:5001";
+const baseURL = "https://20.119.34.167:5001";
 
 // Products
 

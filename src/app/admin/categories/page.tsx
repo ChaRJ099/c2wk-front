@@ -20,7 +20,7 @@ import CategoryForm from "../components/CategoryForm";
 import { Category } from "@/app/interfaces/category-interface";
 import { AuthContext } from "@/app/context/Authcontext";
 
-const apiUrl = "http://20.119.34.167:5001";
+const apiUrl = "https://20.119.34.167:5001";
 
 export default function CategoriesPage() {
   const [activeTab, setActiveTab] = useState<number>(0);

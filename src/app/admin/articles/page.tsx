@@ -27,7 +27,7 @@ import * as apiProductService from "@/app/services/api-products-service";
 import CategoryForm from "../components/CategoryForm";
 import ProductForm from "../components/ProductForm";
 
-const apiUrl = "http://20.119.34.167:5001";
+const apiUrl = "https://20.119.34.167:5001";
 
 export default function ArticlesPage() {
   const [activeTab, setActiveTab] = useState<number>(0);
