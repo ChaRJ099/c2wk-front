@@ -1,6 +1,6 @@
 import { CategoryInterface } from "../interfaces/category-interface";
 
-const baseURL = "https://20.119.34.167:5001";
+const baseURL = "http://20.119.34.167:5001";
 
 export const getCategories = async () => {
   return await fetch(`${baseURL}/api/categories`)

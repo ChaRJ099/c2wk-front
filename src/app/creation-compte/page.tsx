@@ -7,7 +7,7 @@ import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 import { UserInfosInterface } from "../interfaces/interfaces";
 import { useRouter } from "next/navigation";
 
-const apiUrl = "https://20.119.34.167:5001";
+const apiUrl = "http://20.119.34.167:5001";
 
 export default function CreateAccountPage() {
   const [userInfos, setUserInfos] = useState<UserInfosInterface>({
