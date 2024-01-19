@@ -9,15 +9,15 @@ import { UserInfosInterface } from "../interfaces/interfaces";
 import { useRouter } from "next/navigation";
 import { Http2ServerResponse } from "http2";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = "http://20.119.34.167:5001";
 
 export default function CreateAccountPage() {
   const [userInfos, setUserInfos] = useState<UserInfosInterface>({
-    mail: '',
-    password: '',
-    firstname: '',
-    lastname: '',
-  })
+    mail: "",
+    password: "",
+    firstname: "",
+    lastname: "",
+  });
   const router = useRouter();
 
   const handleChange = (e: any) => {
@@ -30,24 +30,23 @@ export default function CreateAccountPage() {
 
   const register = async (userInfos: UserInfosInterface) => {
     const response = await fetch(`${apiUrl}/api/users`, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(userInfos),
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(userInfos),
     })
-    .then((response) => response)
-    .then((data) => data)
+      .then((response) => response)
+      .then((data) => data);
     if (response.status === 201) {
-      router.replace('/connexion');
-    }   
-    
-  }
+      router.replace("/connexion");
+    }
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     register(userInfos);
-  }
+  };
 
   return (
     <section className={styles.formlogin_section}>
@@ -86,10 +85,7 @@ export default function CreateAccountPage() {
             name="password"
             onChange={(e) => handleChange(e)}
           />
-          <Button
-            variant="contained"
-            onClick={(e) => handleSubmit(e)}
-          >
+          <Button variant="contained" onClick={(e) => handleSubmit(e)}>
             Créer mon compte
           </Button>
         </Grid>
